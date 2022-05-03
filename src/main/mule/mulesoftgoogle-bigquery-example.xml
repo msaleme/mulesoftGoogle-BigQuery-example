@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:bigquery="http://www.mulesoft.org/schema/mule/bigquery" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/bigquery http://www.mulesoft.org/schema/mule/bigquery/current/mule-bigquery.xsd">
+	<flow name="mulesoftgoogle-bigquery-exampleFlow" doc:id="865806af-b2b8-4a46-ba41-090c3566d680" >
+		<bigquery:on-table-row doc:name="On Table Row" doc:id="9310c257-d166-44d7-808b-94fb9dc96870" >
+			<scheduling-strategy >
+				<fixed-frequency />
+			</scheduling-strategy>
+		</bigquery:on-table-row>
+	</flow>
+	<flow name="mulesoftgoogle-bigquery-exampleFlow2" doc:id="fb37a25f-acf7-4216-83c2-7d4421416807" >
+		<bigquery:query doc:name="Query" doc:id="153d7196-9dfd-408a-802b-51bba5262f6b" />
+		<bigquery:list-jobs doc:name="List Jobs" doc:id="ef8768fe-e4a0-4929-bf3f-a277e93e9c73" />
+	</flow>
+	<flow name="mulesoftgoogle-bigquery-exampleFlow1" doc:id="1f289c45-0d34-4d29-be64-62ede51975b9" >
+		<bigquery:get-query-results doc:name="Get Query Results" doc:id="d0fd3574-705c-4187-b2a0-2238b96e3379" />
+	</flow>
+</mule>
